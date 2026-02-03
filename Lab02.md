@@ -40,5 +40,7 @@ y porcentajes. Finaliza con 2 conclusiones clave.
 |Aspecto | Sin RACE| Con RACE |
 |-|-|-|
 |Claridad ||
-|Utilidad|||
+|Utilidad |||
 |Formato |||
+
+
