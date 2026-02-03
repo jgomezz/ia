@@ -2,7 +2,7 @@
 
 ## RACE Prompt Engineering + Google Dorks (2 horas)
 
-- Archivo: BD-delitos-denunciados-2025-11.csv
+- Archivo: <a href="BD-delitos-denunciados-2025-11.csv" >BD-delitos-denunciados-2025-11.csv</a>
 - Datos: Delitos denunciados en Perú (Enero-Noviembre 2025)
 
 ---
