@@ -124,6 +124,7 @@ site:edu.pe "criminalidad" OR "delincuencia" filetype:pdf
 ```
 
 - Paso 2: Busca contexto con Google Dorks
+
 Supongamos que ChatGPT respondió: "Agresiones en contra de las mujeres o integrantes del grupo familiar
 Cantidad exacta: 233,971 denuncias"
 Usa este dork:
