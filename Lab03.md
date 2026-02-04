@@ -11,7 +11,7 @@ Referencia https://www.datosabiertos.gob.pe/dataset/mpfn-delitos-denunciados
 ---
 
 
-## EJERCICIO 1: Crear Tu Primer Project
+## EJERCICIO 1: Crear y configurar el Proyecto
 
 - Paso 1: Crear el Project
 
