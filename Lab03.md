@@ -106,11 +106,20 @@ RESTRICCIONES:
 - Citar fuente: Ministerio Público - Fiscalía Perú
 ```
 
+- Ingresar un prompt genérico
+```
+Analiza los datos de delitos
+```
+
+
+
 ### **Observa**:
 
 - ¿Identificó las categorías principales?
 - ¿Citó artículos del código penal?
 - ¿Diferenció entre denuncia y delito?
+
+
 
 
 ## EJERCICIO 2: Análisis con RACE 
