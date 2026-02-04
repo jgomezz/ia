@@ -23,11 +23,19 @@ Nombre: "Análisis Seguridad Ciudadana - Lima 2025"
 <img src="images/chatgpt_create_project.png" />
 
 - Paso 2: Configurar Instrucciones
-Click en "Customize" o ⚙️ del Project.
-Pega estas instrucciones:
+
+Seleccionar el proyecto creado
+
 
 <img src="images/chatgpt_add_files_project.png" />
 
+Hacer Click en "Add files".
+
+<img src="images/chatgpt_add_files_project.png" />
+
+Pega estas instrucciones:
+
+<img src="images/chatgpt_instructions_project.png" />
 
 ```
 IDENTIDAD:
