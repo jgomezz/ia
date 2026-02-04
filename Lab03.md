@@ -1,6 +1,6 @@
 # LABORATORIO: Projects de ChatGPT para Análisis
 
-## RACE Prompt Engineering + Google Dorks (2 horas)
+## Datos
 
 - Datos: Delitos denunciados en Perú (Enero-Noviembre 2025)
 - Archivo: <a href="BD-delitos-denunciados-2025-11.csv" >[MPFN] Delitos Denunciados 2025</a>
@@ -15,10 +15,11 @@ Referencia https://www.datosabiertos.gob.pe/dataset/mpfn-delitos-denunciados
 
 - Paso 1: Crear el Project
 
-
 Abre ChatGPT
-Barra lateral → "Projects" → "New Project"
-Nombre: "Análisis Seguridad Ciudadana - Lima 2025"
+
+Y en la Barra lateral seleccionar → "Projects" → "New Project"
+
+Colocar este nombre : "Análisis Seguridad Ciudadana - Lima 2025"
 
 <img src="images/chatgpt_create_project.png" />
 
@@ -26,8 +27,7 @@ Nombre: "Análisis Seguridad Ciudadana - Lima 2025"
 
 Seleccionar el proyecto creado
 
-
-<img src="images/chatgpt_add_files_project.png" />
+<img src="images/chatgpt_select_project.png" />
 
 Hacer Click en "Add files".
 
