@@ -186,38 +186,6 @@ en todo el dataset? Dame el nombre y la cantidad exacta.
 
 ```
 
-
-### Dorks útiles para este caso
-1. Buscar reportes oficiales:
-
-```
-site:gob.pe "delitos denunciados" filetype:pdf
-```
-2. Buscar estadísticas complementarias:
-```
-site:inei.gob.pe "seguridad ciudadana" 2024..2025
-```
-3. Buscar noticias sobre extorsión:
-```
-"extorsión" site:pe inurl:noticias 2025
-```
-4. Buscar estudios académicos:
-```
-site:edu.pe "criminalidad" OR "delincuencia" filetype:pdf
-```
-
-
-## EJERCICIO 4: Combinación
-
-- Paso 1: Identifica el delito más frecuente con ChatGPT
-
-```
-[ROLE] Analista de datos.
-[ACTION] ¿Cuál es el delito específico (des_articulo) con más denuncias?
-[CONTEXT] Archivo CSV completo.
-[EXPECTATION] Dame el nombre del delito y cantidad exacta.
-```
-
 - Paso 2: Busca contexto con Google Dorks
 
 Supongamos que ChatGPT respondió: "Agresiones en contra de las mujeres o integrantes del grupo familiar
@@ -225,22 +193,34 @@ Cantidad exacta: 233,971 denuncias"
 Usa este dork:
 
 ```
-site:gob.pe "Agresiones en contra de las mujeres" OR "artículo 205" delito 2024..2025
+site:gob.pe "Agresiones en contra de las mujeres" 2024..2025
 ```
 
-- Paso 3: Enriquece análisis con ChatGPT
 ```
-[ROLE] Analista criminológico.
-[ACTION] Basándote en estos datos del CSV y la información 
-web que encontré [pega resumen de búsqueda], explica:
-- ¿Por qué "Agresiones en contra de las mujeres" es tan frecuente?
-- ¿Qué tipo de casos incluye típicamente?
-- ¿Es delito grave o leve?
+"agresiones" "mujeres"  site:pe 2025
+```
 
-[CONTEXT] Necesito explicarlo a ciudadanos sin conocimiento legal.
-[EXPECTATION] Respuesta clara, máximo 150 palabras.
+
+- Paso 3: Enriquece análisis
 ```
-## EJERCICIO 5: Caso de Uso Real
+[ROLE] Investigador de políticas de seguridad.
+
+[ACTION] Basándote en que las agresiones en contra de las mujeres es el delito más  denunciado (según nuestro dataset) y esta información web:
+
+[PEGA 2-3 HALLAZGOS DE GOOGLE DORKS]
+
+Responde:
+1. ¿Existen políticas públicas actuales contra este delito?
+2. ¿Qué operativos se han implementado?
+3. ¿Hay discrepancia entre denuncias y percepción ciudadana?
+4. ¿Qué explica el alto número de denuncias?
+
+[CONTEXT] Memo para Fiscal de la Nación.
+
+[EXPECTATION] Análisis integrado cuantitativo y cualificativo. 300 palabras.
+```
+
+## EJERCICIO 4: Análisis Comparativos
 
 Escenario
 Eres analista en ONG de seguridad ciudadana. Te piden:
