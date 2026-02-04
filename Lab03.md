@@ -113,49 +113,79 @@ RESTRICCIONES:
 - ¿Diferenció entre denuncia y delito?
 
 
-## EJERCICIO 2: Análisis Comparativo 
+## EJERCICIO 2: Análisis con RACE 
 
-- Prompt RACE para comparación regional
+- Análisis 1: Delitos contra el Patrimonio
+
+Crea chat: "Análisis Delitos Patrimonio"
+
+Prompt RACE:
 
 ```
-[ROLE] Eres consultor en política criminal para el gobierno regional.
+[ROLE] Eres fiscal especializado en delitos patrimoniales.
 
-[ACTION] Compara los delitos entre Lima, Arequipa y Cusco:
-- Estafas (artículos 196 y 196-A)
-- Extorsión (artículo 200)
-- Robo agravado (artículo 189)
+[ACTION] Analiza delitos contra el patrimonio:
+- Total de denuncias de esta categoría
+- Top 5 delitos específicos (hurto, robo, estafa, etc.)
+- Artículos del código penal más denunciados
+- Departamentos más afectados (Top 3)
+- Diferencia entre hurto simple vs agravado
 
-[CONTEXT] Necesito decidir dónde priorizar recursos policiales 
-en el último trimestre del año.
+[CONTEXT] Priorizar recursos fiscales y policiales para 
+investigación en Q4 2025.
 
 [EXPECTATION] 
-1. Tabla comparativa con cantidades
-2. Identifica cuál región tiene más de cada delito
-3. Recomienda 1 región prioritaria con justificación
+- Tabla con cifras exactas por tipo
+- % que representa cada delito del total patrimonial
+- Identificar EL distrito fiscal más crítico
+- 3 recomendaciones operativas inmediatas
+Máximo 400 palabras.
+
 ```
 
-- Variación: Análisis temporal
+- Análisis 1: Delitos de Alto Impacto
+
+Crea chat: "Análisis Delitos Alto Impacto"
+
+Prompt RACE:
 
 ```
-[ROLE] Eres analista de tendencias criminales.
+[ROLE] Analista de inteligencia criminal.
 
-[ACTION] Identifica patrones preocupantes en delitos contra 
-la administración pública (colusión, peculado, cohecho).
+[ACTION] Foco en delitos de alto impacto social:
+- Extorsión (art. 200)
+- Robo agravado (art. 189)
+- Secuestro (si existe en datos)
+- Homicidio (si existe en datos)
 
-[CONTEXT] Datos de 11 meses de 2025. Busca departamentos 
-con cifras anormalmente altas.
+Para cada uno:
+- Total de denuncias
+- Departamentos donde más se denuncia
+- Tendencia (si hay datos previos, sino omitir)
 
-[EXPECTATION] 
-- Top 5 departamentos
-- Tipo de delito administrativo predominante en cada uno
-- 1 hipótesis del por qué (basada en datos)
+[CONTEXT] Diseñar operativos focalizados PNP-Fiscalía.
+
+[EXPECTATION]
+- Tabla comparativa de delitos alto impacto
+- Identificar cuál es más frecuente
+- Mapa conceptual de geografía crítica
+- Recomendar coordinación interinstitucional específica
 ```
 
-## EJERCICIO 3: Google Dorks + ChatGPT
+## EJERCICIO 3: Google Dorks + Project
 
-**¿Qué son Google Dorks?**
+**Objetivo**
+Complementar análisis con contexto de políticas públicas y operativos.
 
-Comandos avanzados para búsquedas precisas en Google.
+- Paso 1: Identificar Delito Más Frecuente
+
+Prompt 
+```
+¿Cuál es el delito específico (des_articulo) más denunciado 
+en todo el dataset? Dame el nombre y la cantidad exacta.
+
+```
+
 
 ### Dorks útiles para este caso
 1. Buscar reportes oficiales:
