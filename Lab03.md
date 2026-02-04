@@ -21,7 +21,7 @@ Y en la Barra lateral seleccionar → "Projects" → "New Project"
 
 Colocar este nombre : "Análisis Seguridad Ciudadana - Lima 2025"
 
-<img src="images/chatgpt_create_project.png" />
+<img src="images/chatgpt_create_project.png" width="200" />
 
 - Paso 2: Configurar Instrucciones
 
