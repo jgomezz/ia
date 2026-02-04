@@ -27,15 +27,15 @@ Colocar este nombre : "Análisis Seguridad Ciudadana - Lima 2025"
 
 Seleccionar el proyecto creado
 
-<img src="images/chatgpt_select_project.png" />
+<img src="images/chatgpt_select_project.png" width="800"  />
 
 Hacer Click en "Add files".
 
-<img src="images/chatgpt_add_files_project.png" />
+<img src="images/chatgpt_add_files_project.png" width="800"  />
 
 Pega estas instrucciones:
 
-<img src="images/chatgpt_instructions_project.png" />
+<img src="images/chatgpt_instructions_project.png" width="800"  />
 
 ```
 IDENTIDAD:
