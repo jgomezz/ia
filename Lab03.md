@@ -106,6 +106,13 @@ RESTRICCIONES:
 - Citar fuente: Ministerio Público - Fiscalía Perú
 ```
 
+- **Observa**:
+
+¿Identificó las categorías principales?
+¿Citó artículos del código penal?
+¿Diferenció entre denuncia y delito?
+
+
 ## EJERCICIO 2: Análisis Comparativo 
 
 - Prompt RACE para comparación regional
