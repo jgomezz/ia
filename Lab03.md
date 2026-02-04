@@ -222,132 +222,137 @@ Responde:
 
 ## EJERCICIO 4: Análisis Comparativos
 
-Escenario
-Eres analista en ONG de seguridad ciudadana. Te piden:
-"Identificar qué departamentos necesitan urgentemente
-programas de prevención de violencia contra mujeres"
-- Paso 1: Prompt RACE para ChatGPT
-```
-[ROLE] Analista de género y seguridad para ONG.
+- Análisis 1: Comparación Geográfica
 
-[ACTION] Del CSV, identifica departamentos con mayor incidencia de:
-- Lesiones (artículos relacionados si existen)
-- Violencia familiar (si está categorizada)
-- Delitos sexuales (si están en los datos)
+Crea chat: "Comparativa Regional Delitos"
 
-Si no encuentras categorías específicas de género, identifica 
-delitos que típicamente afectan más a mujeres.
-
-[CONTEXT] Datos enero-noviembre 2025. Necesito priorizar 
-3 departamentos para intervención.
-
-[EXPECTATION] 
-1. Tabla con Top 5 departamentos
-2. Tipos de delitos más frecuentes en cada uno
-3. Recomendación de 3 regiones prioritarias con justificación
-```
-- Paso 2: Complementa con Google Dorks
-
-Busca estadísticas oficiales:
-```
-site:inei.gob.pe "violencia contra la mujer" estadísticas 2025
-```
-Busca programas existentes:
-```
-site:gob.pe "programa prevención violencia" departamento filetype:pdf
-```
-- Paso 3: Genera reporte ejecutivo
+Prompt RACE:
 
 ```
-[ROLE] Redactor de informes ejecutivos para ONG.
+[ROLE] Geógrafo forense y criminólogo.
 
-[ACTION] Redacta un brief ejecutivo (1 página) que incluya:
-- Hallazgos principales del análisis de datos
-- Top 3 departamentos prioritarios
-- Justificación basada en cifras
-- 2 recomendaciones de acción
+[ACTION] Compara criminalidad entre las 3 principales regiones:
+- Lima Metropolitana
+- Arequipa
+- La Libertad (Trujillo)
 
-[CONTEXT] Audiencia: Directora ejecutiva de ONG (no técnica).
-Datos: CSV de delitos + info web encontrada.
+Para cada una:
+- Total de denuncias
+- Top 3 delitos
+- Delito más característico (si hay diferencia)
+- Tasa de denuncias por habitante (si puedes estimar)
 
-[EXPECTATION] Máximo 300 palabras, lenguaje claro, 
-incluye cifras concretas. Formato: título, hallazgos, 
-recomendaciones.
-```
-## EJERCICIO 6: Detección de Anomalías
+[CONTEXT] Asignación de fiscales especializados por región.
 
-- Prompt RACE avanzado
-
-```
-[ROLE] Científico de datos especializado en criminología.
-
-[ACTION] Identifica 3 anomalías o patrones inusuales en los datos:
-- Delitos con cifras sospechosamente altas en un solo distrito
-- Tipos de delito que aparecen en zonas inesperadas
-- Distribuciones geográficas anormales
-
-[CONTEXT] Busco entender si hay outliers que requieren investigación 
-adicional o posibles errores en datos.
-
-[EXPECTATION] Para cada anomalía indica:
-- Qué es
-- Dónde ocurre (departamento/distrito)
-- Por qué es inusual
-- Hipótesis de causa
+[EXPECTATION]
+- Tabla comparativa 3 regiones
+- Identificar si patrones criminales varían
+- Hipótesis de diferencias regionales (urbano/rural, frontera, etc.)
+- Recomendar especialización fiscal territorial
 ```
 
-## PLANTILLAS RACE
-
-- Template 1: Análisis exploratorio
-```
-[ROLE] Analista de datos del sector [X]
-[ACTION] Explora el dataset e identifica [Y patrones/métricas]
-[CONTEXT] Datos de [período] sobre [tema]. Enfoque en [aspecto]
-[EXPECTATION] [Formato específico], [cantidad de insights], [audiencia]
-```
-
-- Template 2: Comparación
-```
-
-[ROLE] Consultor estratégico
-[ACTION] Compara [A] vs [B] en términos de [criterios]
-[CONTEXT] Necesito [decisión] basada en [factores]
-[EXPECTATION] Tabla comparativa + recomendación justificada
-```
-
-- Template 3: Reporte ejecutivo
+- Análisis 2: Delitos Administración Pública (15 min)
+Crea chat: "Análisis Corrupción Funcionarios"
+Prompt RACE:
 
 ```
-[ROLE] Redactor de informes para [nivel directivo]
-[ACTION] Genera reporte de [tema] destacando [aspectos clave]
-[CONTEXT] Audiencia [perfil]. Datos disponibles: [fuentes]
-[EXPECTATION] [Extensión], [secciones específicas], lenguaje [tipo]
+[ROLE] Fiscal anticorrupción.
+
+[ACTION] Analiza denuncias contra administración pública:
+- Colusión (art. 384)
+- Peculado (art. 387, 388)
+- Cohecho (art. 393, 395-A)
+- Abuso de autoridad (art. 376, 377)
+
+Para cada uno:
+- Total denuncias
+- Departamentos con más casos
+- Comparación entre tipos
+
+[CONTEXT] Priorizar investigaciones anticorrupción.
+
+[EXPECTATION]
+- Tabla delitos administración pública
+- Identificar departamento con más corrupción denunciada
+- ¿Coincide con percepción pública?
+- 3 acciones fiscales prioritarias
 ```
 
-## GOOGLE DORKS ESENCIALES
+- Análisis 3: Estafas y Fraudes 
+Crea chat: "Análisis Estafas Digitales"
+Prompt RACE:
 
-|Dork | Uso |
-|-|-|
-|site:dominio.com | Buscar solo en ese sitio|
-|filetype:pdf|Solo archivos PDF|
-|"frase exacta"| Coincidencia exacta|
-|2024..2025| Rango de años
-|OR| Una u otra palabra|
-|intitle:palabra|Palabra en el título|
-|inurl:palabra|Palabra en la URL|
-|-palabra|Excluir término|
+```
+[ROLE] Fiscal de delitos económicos y cibercrimen.
 
+[ACTION] Foco en estafas (art. 196, 196-A):
+- Total de denuncias
+- ¿Estafa simple vs agravada?
+- Geografía donde más se denuncia
+- Hipótesis: ¿estafas digitales en aumento?
 
-- Ejemplos para análisis de seguridad
+[CONTEXT] Coordinación con policía cibernética.
+
+[EXPECTATION]
+- Cifras exactas
+- Diferencia entre tipos de estafa
+- Si es delito en crecimiento (basado en data)
+- Recomendación de prevención ciudadana
 ```
-site:gob.pe "estadística criminal" filetype:xlsx
+
+## EJERCICIO 5: Reporte Final Integrado 
+
+**Objetivo**
+
+Consolidar análisis en documento ejecutivo para Fiscalía.
+
+- Paso 1: Reporte Ejecutivo
+
+Crea chat: "Reporte Ejecutivo Fiscalía"
+
+Prompt RACE:
+
 ```
-```
-"delitos contra el patrimonio" site:pe 2025 -pdf
-```
-```
-site:mpfn.gob.pe OR site:pj.gob.pe "robo agravado"
-```
-```
-intitle:"reporte delitos" site:edu.pe filetype:pdf 2024..2025
+[ROLE] Jefe de Gabinete de Fiscal de la Nación.
+
+[ACTION] Genera reporte ejecutivo consolidando TODO el Project:
+
+Estructura:
+
+1. RESUMEN EJECUTIVO (150 palabras)
+   - Total denuncias analizadas
+   - 3 hallazgos más críticos
+   - Recomendación principal
+
+2. PANORAMA GENERAL (300 palabras)
+   - Categorías de delitos predominantes
+   - Geografía crítica (dptos/distritos fiscales)
+   - Delitos específicos más frecuentes
+
+3. ANÁLISIS POR PRIORIDAD (400 palabras)
+   
+   A) DELITOS PATRIMONIALES
+   - Magnitud del problema
+   - Zonas críticas
+   
+   B) DELITOS DE ALTO IMPACTO
+   - Extorsión, robo agravado
+   - Geografía
+   
+   C) CORRUPCIÓN PÚBLICA
+   - Tipos de delitos contra administración
+   - Departamentos afectados
+
+4. RECOMENDACIONES ESTRATÉGICAS (250 palabras)
+   - Asignación de fiscales especializados
+   - Coordinación PNP-Fiscalía
+   - Prevención ciudadana
+   - Políticas de investigación prioritaria
+
+[CONTEXT] Audiencia: Junta de Fiscales Supremos.
+Decisión: Asignación presupuestal y recursos humanos 2026.
+
+[EXPECTATION] Documento formal, técnico-legal, datos precisos,
+recomendaciones viables. Total: ~1100 palabras.
+
 ```
