@@ -95,3 +95,110 @@ Expectation:
 Para exportar el documento realizarlo en esta opción
 
 <img src="images/gemini_exportar.png" />
+
+
+## EJERCICIO 2: Análisis Predictivo y Storytelling de Datos
+
+
+- **Paso 1 - Análisis de Tendencias y "Pareto"** 
+
+**Objetivo**: Identificar dónde está el 80% del problema sin usar fórmulas complejas.
+
+Subir los 2 archivos y ejecutar el siguiente prompt
+
+```
+Role: Actúa como un Analista de Estrategia Criminal. 
+
+Action: Identifica los 5 delitos que suman el mayor volumen de denuncias en todo el país (des_articulo) y calcula qué porcentaje representan del total. 
+
+Context: Necesitamos priorizar recursos para el próximo año basándonos en los datos de noviembre 2025. 
+
+Expectation: 
+   1. Una tabla con el Delito, la Cantidad y el % de participación. 
+   2. Una breve explicación de por qué estos delitos son los más críticos según tu análisis. 
+   3. Usa Python para asegurar que el cálculo sobre los miles de registros sea exacto.
+   4. Dame el codigo Python usado para los calculos
+   5. Siempre debes leer el documento adjunto.
+
+```
+
+
+- **Paso 2 - Análisis de Tendencias y "Pareto"** 
+
+**Objetivo**: Comparar realidades distintas (ej. Costa vs. Selva) para encontrar anomalías.
+
+Vamos a pedirle a Gemini que agrupe departamentos.
+
+```
+Role: 
+   Actúa como un Geógrafo de Datos. 
+   
+Action: 
+   Compara el comportamiento de los delitos informáticos entre el Distrito Fiscal de LIMA y el de PIURA. 
+   
+Context: 
+   Queremos saber si la ciberdelincuencia afecta igual a la capital que al norte del país. 
+   
+Expectation: 
+   1. Un cuadro comparativo con la cantidad de denuncias de la "LEY Nº 30096". 
+   2. Identifica cuál es el delito informático más frecuente en cada una de estas dos regiones. 
+   3. Crea un gráfico de barras comparativo (usando Python) para visualizar esta diferencia
+   4. Dame el codigo Python usado para los calculos
+   5. Siempre debes leer el documento adjunto.
+
+```
+
+
+- **Paso 3 - Storytelling y Visualización de Impacto** 
+
+**Objetivo**: Traducir datos a una visualización animada.
+
+Crear una visualización
+
+```
+Role: 
+   Actúa como un experto en Data Storytelling. 
+
+Action: 
+
+   Crea un gráfico de "Calor" o un gráfico de barras que muestre la evolución de denuncias por departamento. 
+
+Context: 
+   Este gráfico será la pieza central de una presentación ante el Ministerio. 
+   
+Expectation: 
+   1. El gráfico debe ser visualmente atractivo (usa colores degradados o estilos modernos). 
+   2. Acompáñalo de un "Titular de Impacto" que resuma el hallazgo más sorprendente de los datos. 
+   3. Redacta 3 puntos clave (bullets) que expliquen el gráfico a alguien que no sabe de estadística.
+   4. Dame el codigo Python usado para los calculos
+   5. Siempre debes leer el documento adjunto.
+
+```
+
+
+
+- **Paso 4 - Generación de Reporte** 
+
+**Objetivo**: Traducir datos a una visualización animada.
+
+Crear una visualización
+
+```
+Role: 
+   Actúa como un experto en Data Storytelling. 
+
+Action: 
+
+   Crea un gráfico de "Calor" o un gráfico de barras que muestre la evolución de denuncias por departamento. 
+
+Context: 
+   Este gráfico será la pieza central de una presentación ante el Ministerio. 
+   
+Expectation: 
+   1. El gráfico debe ser visualmente atractivo (usa colores degradados o estilos modernos). 
+   2. Acompáñalo de un "Titular de Impacto" que resuma el hallazgo más sorprendente de los datos. 
+   3. Redacta 3 puntos clave (bullets) que expliquen el gráfico a alguien que no sabe de estadística.
+   4. Dame el codigo Python usado para los calculos
+   5. Siempre debes leer el documento adjunto.
+
+```
