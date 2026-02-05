@@ -1,4 +1,4 @@
-# LABORATORIO: Reporte Visual Completo desde CSV
+# LABORATORIO: Análisis de datos con Gemini
 
 ## Datos
 
@@ -11,353 +11,87 @@ Referencia https://www.datosabiertos.gob.pe/dataset/mpfn-delitos-denunciados
 ---
 
 
-## EJERCICIO 1: Crear y configurar el Proyecto
-
-- Paso 1: Reporte Visual Delitos - Generación Automática
+## EJERCICIO 1: Entendiendo los datos
 
 
-Abre ChatGPT
+- **Paso 1 - Entendiendo los datos** 
 
-Y en la Barra lateral seleccionar → "Projects" → "New Project"
+**Objetivo**: Que la IA explique el archivo al analista para evitar errores de interpretación.
 
-Colocar este nombre : "Análisis Seguridad Ciudadana - Lima 2025"
-
-<img src="images/chatgpt_create_project.png" width="800" />
-
-- Paso 2: Configurar Instrucciones
-
-Seleccionar el proyecto creado
-
-<img src="images/chatgpt_select_project.png" width="800"  />
-
-Hacer Click en "Add files".
-
-<img src="images/chatgpt_add_files_project.png" width="800"  />
-
-Pega estas instrucciones:
-
-<img src="images/chatgpt_instructions_project.png" width="800"  />
-
-```
-IDENTIDAD:
-Eres analista de datos y desarrollador de reportes visuales 
-para seguridad ciudadana. Generas código Python para crear:
-- Gráficos estadísticos (matplotlib, seaborn, plotly)
-- Dashboards visuales
-- Reportes PDF con visualizaciones integradas
-
-CAPACIDADES DE GENERACIÓN:
-1. Analizar CSV y proponer visualizaciones apropiadas
-2. Generar código Python completo y ejecutable
-3. Crear gráficos estáticos (PNG/JPG)
-4. Generar gráficos interactivos (HTML con Plotly)
-5. Integrar todo en PDF profesional
-
-LIBRERÍAS DISPONIBLES:
-- pandas: Manipulación de datos
-- matplotlib: Gráficos estáticos básicos
-- seaborn: Gráficos estadísticos avanzados
-- plotly: Gráficos interactivos
-- fpdf2 o reportlab: Generación de PDFs
-
-ESTILO DE CÓDIGO:
-- Siempre incluir imports completos
-- Código comentado paso a paso
-- Manejo de errores básico
-- Rutas de archivo configurables
-- Modular y reutilizable
-
-PALETA DE COLORES ESTÁNDAR:
-- Crítico/Alto: #E74C3C (rojo)
-- Advertencia: #F39C12 (naranja)
-- Moderado: #F1C40F (amarillo)
-- Bajo: #2ECC71 (verde)
-- Info: #3498DB (azul)
-
-TIPOS DE GRÁFICOS PREFERIDOS:
-- Barras horizontales: Top N elementos
-- Barras verticales: Comparación temporal
-- Líneas: Tendencias temporales
-- Mapas de calor: Matrices de correlación
-- Treemap: Proporciones jerárquicas
-- Donut/Pie: Distribución porcentual (solo si <7 categorías)
-
-FORMATO DE OUTPUT:
-Al generar código, SIEMPRE incluye:
-1. Explicación de qué hace el código
-2. Librerías necesarias para instalar
-3. El código completo
-4. Nombre del archivo de salida
-5. Instrucciones de ejecución
-```
-
-
-## EJERCICIO 1: Primera Visualización
-
-- Crea chat: "Gráfico Top 10 Delitos"
-
-Prompt RACE:
-
-```
-[ROLE] Desarrollador de visualizaciones de datos.
-
-[ACTION] Genera código Python para crear gráfico de barras 
-horizontales con los TOP 10 delitos más denunciados:
-
-- Eje Y: Nombre del delito (des_articulo)
-- Eje X: Cantidad de denuncias
-- Colores: Gradiente según cantidad (más denuncias = más rojo)
-- Título: "Top 10 Delitos Más Denunciados - Perú 2025"
-- Etiquetas: Mostrar cantidad al final de cada barra
-- Tamaño: 12x8 pulgadas
-- Guardar como: top10_delitos.png
-
-[CONTEXT] Gráfico para reporte ejecutivo mensual.
-
-[EXPECTATION] 
-- Código Python completo
-- Que use el CSV cargado en el Project
-- Comentarios explicando cada sección
-- Gráfico profesional y legible
-```
-
-- Solicitar generación del gráfico
-
-```
-Genera el gráfico de salida
-```
-
-## EJERCICIO 2: Gráficos Estáticos Múltiples  
-
-**Objetivo**
-
-Generar suite completa de visualizaciones desde el CSV.
-
-- Visualización 1: Mapa de Calor Departamental (10 min)
-
-Crea chat: "Mapa de Calor Departamental"
-
-Prompt RACE:
-
-```
-[ROLE] Analista de geografía criminal.
-
-[ACTION] Genera código Python para mapa de calor (heatmap) 
-que muestre:
-- Filas: Top 15 departamentos (dpto_pjfs)
-- Columnas: Top 5 categorías de delitos (generico)
-- Valores: Cantidad de denuncias
-- Colores: Escala de azul (bajo) a rojo (alto)
-- Anotaciones: Mostrar números en cada celda
-- Título: "Concentración de Delitos por Departamento y Tipo"
-- Guardar como: heatmap_dpto_delitos.png
-
-[CONTEXT] Identificar zonas y delitos críticos de un vistazo.
-
-[EXPECTATION]
-- Código usando seaborn o matplotlib
-- Matriz legible (tamaño apropiado)
-- Colores profesionales
-```
-
-- Visualización 2: Evolución Mensual
-
-Crea chat: "Tendencia Mensual"
-
-Prompt RACE:
+Subir los 2 archivos y ejecutar el siguiente prompt
 
 
 ```
-[ROLE] Analista de tendencias temporales.
+Role: Actúa como un consultor de datos que explica conceptos.
 
-[ACTION] Genera código para gráfico de líneas múltiples:
-- Eje X: Meses (periodo_denuncia)
-- Eje Y: Cantidad de denuncias
-- Líneas separadas para top 5 delitos más frecuentes
-- Cada línea con color diferente y marcadores
-- Leyenda clara
-- Título: "Evolución Mensual - Top 5 Delitos"
-- Grid para facilitar lectura
-- Guardar como: tendencia_mensual.png
+Action: Lee el PDF del diccionario y analiza el CSV. Explícame en lenguaje sencillo de qué trata esta base de datos.
 
-[CONTEXT] Identificar estacionalidad y tendencias.
+Context: Estoy empezando a usar IA y no quiero confundirme con nombres técnicos de las columnas.
 
-[EXPECTATION]
-- Código con pandas para agrupar por mes
-- Gráfico claro con leyenda
-- Líneas diferenciables
-```
-
-- Visualización 3: Distribución Porcentual (10 min)
-
-Crea chat: "Gráfico Distribución"
-
-Prompt RACE:
-
-```
-[ROLE] Diseñador de infografías estadísticas.
-
-[ACTION] Genera código para gráfico donut (dona):
-- Categorías: Tipos genéricos de delitos (generico)
-- Solo mostrar las 6 categorías principales
-- Resto agrupar en "Otros"
-- Mostrar porcentajes dentro y fuera
-- Colores según paleta del Project
-- Título: "Distribución de Delitos por Categoría"
-- Hueco en medio para destacar total
-- Guardar como: distribucion_delitos.png
-
-[CONTEXT] Gráfico para slide de presentación.
-
-[EXPECTATION]
-- Código matplotlib con gráfico donut
-- Porcentajes claros
-- Visualmente atractivo
-```
-
-## EJERCICIO 3: Dashboard Visual Complet
-
-**Objetivo**
-Crear dashboard estilo Power BI con múltiples visualizaciones en una imagen.
-
-- Dashboard Integrado (30 min)
-
-Crea chat: "Dashboard Ejecutivo"
-
-Prompt RACE:
-
-```
-[ROLE] Diseñador de dashboards ejecutivos.
-
-[ACTION] Genera código Python para crear UN SOLO archivo PNG 
-con dashboard de 4 cuadrantes:
-
-LAYOUT (2x2):
-┌─────────────────┬─────────────────┐
-│  CUADRANTE 1    │  CUADRANTE 2    │
-│  Top 10 Delitos │  Mapa Calor     │
-│  (Barras H)     │  Dpto x Tipo    │
-├─────────────────┼─────────────────┤
-│  CUADRANTE 3    │  CUADRANTE 4    │
-│  Tendencia      │  KPIs Clave     │
-│  Mensual        │  (Números)      │
-└─────────────────┴─────────────────┘
-
-CUADRANTE 4 debe mostrar:
-- Total denuncias (número grande)
-- Delito más frecuente
-- Departamento más crítico
-- Promedio denuncias/día
-
-DISEÑO:
-- Fondo blanco/gris claro
-- Título general arriba: "Dashboard Delitos Denunciados - Perú 2025"
-- Subtítulos por cuadrante
-- Espacio entre gráficos
-- Tamaño total: 16x12 pulgadas
-- Guardar como: dashboard_ejecutivo.png
-
-[CONTEXT] Dashboard para proyectar en reunión ejecutiva.
-
-[EXPECTATION]
-- Código usando plt.subplots(2,2)
-- Todo en una imagen integrada
-- Profesional y ejecutivo
-- Cada cuadrante con su análisis
+Expectation: Una lista de las 5 columnas más importantes para hacer un reporte de seguridad y un aviso si encuentras algo que no coincida entre el diccionario y el CSV.
 
 ```
 
+- **Paso 2 - Limpieza de Datos**
 
-## EJERCICIO 4: PDF Reporte Completo
+**Objetivo**: Aprender a corregir textos y formatos solo hablando con la IA.
 
-**Objetivo**
-
-Generar PDF ejecutivo con todos los gráficos integrados.
-
-- Fase 1: Estructura del Reporte (10 min)
-
-Crea chat: "Diseño Reporte PDF"
-
-Prompt:
+Vamos a arreglar los nombres de los delitos que están en mayúsculas.
 
 ```
-Diseña estructura de reporte PDF ejecutivo (10 páginas):
+Role: Actúa como un editor de contenido experto.
 
-ÍNDICE:
-1. Portada
-2. Resumen Ejecutivo (texto + KPIs)
-3. Panorama General (gráfico top 10 delitos)
-4. Análisis Geográfico (heatmap departamental)
-5. Tendencias Temporales (gráfico evolución)
-6. Distribución por Categoría (donut chart)
-7. Dashboard Consolidado (página completa)
-8. Top 5 Departamentos Críticos (tabla + mini gráfico)
-9. Recomendaciones Operativas (texto estructurado)
-10. Anexo: Metodología y fuentes
+Action: Ayúdame a limpiar la columna des_articulo y distrito_fiscal.
 
-Para cada página indica:
-- Título
-- Contenido (gráfico/texto/tabla)
-- Mensaje clave
+Context: Los nombres están en mayúsculas cerradas y se ven mal en un reporte.
+
+Expectation: 
+      1. Cambia los nombres a formato tipo oración (Ej: "FRAUDE INFORMÁTICO" a "Fraude informático"). 
+      2. Muéstrame una tabla con el antes y después de 5 ejemplos.
 
 ```
 
-- Fase 2: Código Generación PDF
+- **Paso 3 - Extracción de Insight**
 
-Prompt RACE:
+**Objetivo**: Encontrar dónde está el problema de la ciberdelincuencia.
+
+Vamos a arreglar los nombres de los delitos que están en mayúsculas.
 
 ```
-[ROLE] Desarrollador de reportes automatizados PDF.
+Role: Actúa como un detective de datos.
 
-[ACTION] Genera código Python COMPLETO para crear el PDF 
-diseñado anteriormente:
+Action: Busca en el archivo todas las denuncias que tengan que ver con la "LEY DE DELITOS INFORMATICOS".
 
-REQUISITOS:
-1. Usar fpdf2 o reportlab
-2. Incluir TODOS los gráficos generados previamente
-3. Texto generado desde análisis del CSV
-4. Tablas con datos clave
-5. Diseño profesional consistente
+Context: Mi jefe necesita saber en qué regiones de Perú se están denunciando más estos casos.
 
-ESPECIFICACIONES:
-- Tamaño: A4
-- Márgenes: 2cm
-- Fuente títulos: Arial Bold 16pt
-- Fuente texto: Arial 11pt
-- Numeración de páginas
-- Encabezado: "Reporte Delitos Denunciados Perú 2025"
-- Pie de página: Fecha generación + página
-
-PORTADA DEBE INCLUIR:
-- Título principal
-- Subtítulo: "Análisis Enero-Noviembre 2025"
-- Logo: [espacio reservado 200x200px]
-- Fecha de generación
-- Autor: "Unidad de Análisis Criminal"
-
-[CONTEXT] PDF para distribución a fiscales y autoridades.
-
-[EXPECTATION]
-- Código modular (función por página)
-- Comentarios extensos
-- Manejo de rutas de imágenes
-- PDF final profesional
-- Nombre archivo: Reporte_Delitos_2025.pdf
+Expectation: 
+      1. Una tabla que sume la cantidad por distrito_fiscal solo de esos delitos. 
+      2. Un gráfico sencillo (de barras) creado aquí mismo que muestre esta comparación. 
+      3. Dime qué región es la más afectada según los números.
 
 ```
 
-- Fase 3: Testing y Ajustes (10 min)
+- **Paso 4 - Creación del Reporte y PDF Final**
 
-Prompt:
-```
-El PDF generado necesita ajustes:
-1. Las imágenes se ven muy grandes/pequeñas
-2. El texto se corta entre páginas
-3. Necesito más espacio entre secciones
+**Objetivo**: Aprender el flujo de trabajo para presentar el trabajo.
 
-Modifica el código para:
-- Redimensionar imágenes automáticamente al ancho de página
-- Agregar saltos de página apropiados
-- Aumentar espacio entre elementos (1.5cm)
-- Centrar todas las imágenes
+Unificar todo en un informe profesional.
+
 ```
+Role: Actúa como un redactor jefe de informes corporativos.
+
+Action: Redacta un resumen ejecutivo de lo que hemos descubierto hoy sobre las denuncias de noviembre 2025.
+
+Context: El reporte debe ser breve, para alguien que tiene poco tiempo de leer.
+
+Expectation: 
+      1. Un título impactante. 
+      2. Tres puntos clave (insights). 
+      3. Una conclusión sobre el impacto de la ciberdelincuencia. 
+      4. Organiza todo con negritas y viñetas para que se vea bien al exportarlo a un documento.
+
+```
+
+Para exportar el documento realizarlo en esta opción
+
+<img src="images/gemini_exportar.png" />
