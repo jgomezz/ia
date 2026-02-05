@@ -238,3 +238,88 @@ Expectation:
 ```
 
 <img src="images/gemini_create_gems.png"/>
+
+
+- **Paso 2 - Análisis de Contexto** 
+
+- Comprobar que el Gem recuerda los archivos sin adjuntarlo
+
+Abrir el Gem "Analista de Datos"
+
+Ejecutar el siguiente prompt
+
+```
+Role: 
+   Analista Senior. 
+
+Action: 
+   Basándote únicamente en el archivo CSV que tienes cargado en tu conocimiento, identifica los 3 distritos con menor cantidad de denuncias. 
+
+Context: 
+   Queremos entender las zonas con menor incidencia reportada. 
+
+Expectation: 
+   Una lista con el distrito y la cantidad exacta. Si necesitas usar Python para verificarlo en el conocimiento, hazlo
+
+```
+
+
+- **Paso 3 - Storytelling y Visualización** 
+
+- Pedirle al Gem que use los datos que ya "conoce" para crear una narrativa.
+
+
+Prompt
+
+```
+Role: 
+   Experto en Comunicación de Datos. 
+   
+Action: 
+   Crea un gráfico de pastel que muestre la distribución de delitos por 'generico' en el departamento de AMAZONAS. 
+
+Context: 
+   Estoy preparando una diapositiva para el comité regional. 
+
+Expectation: 
+   1. El gráfico generado por Python. 
+   2. Un párrafo explicando qué delito domina en esa región y una recomendación preventiva basada en el nombre del artículo.
+
+```
+
+
+- **Paso 4 - Reporte** 
+
+- Aprender a actualizar el conocimiento y cerrar el informe.
+
+
+Prompt
+
+```
+Role: 
+   Actúa como un Consultor Senior en Análisis de Datos y Redacción Corporativa, experto en elaborar reportes de alto nivel para el Ministerio Público.
+
+Action: 
+   Elabora el "Informe Anual de Tendencias de Criminalidad 2025" consolidando toda la inteligencia extraída del archivo CSV y cruzándola con las definiciones del Diccionario de Datos.
+
+Context: 
+   Este reporte será presentado ante una junta directiva. Necesito que los datos fríos se conviertan en una narrativa estratégica que facilite la toma de decisiones para el año 2026.
+
+Expectation: 
+   Estructura el informe exactamente con los siguientes puntos y usa Python para verificar que cada cifra sea exacta:
+
+      1. Resumen Ejecutivo: Un párrafo de alto impacto con el hallazgo más crítico del mes.
+
+      2. Análisis de Integridad: Confirmación de que los datos cumplen con el diccionario técnico (menciona el PDF).
+
+      3. Diagnóstico Regional: Un ranking de los 3 Distritos Fiscales más afectados y qué tipo de delitos predominan allí.
+
+      4. Foco en Ciberdelincuencia: Análisis específico de la Ley Nº 30096.
+
+      5. Conclusiones y Recomendaciones: 3 acciones concretas sugeridas para reducir la incidencia delictiva.
+
+Formato de salida: 
+
+   Usa encabezados (H1, H2), negritas para resaltar KPIs y tablas limpias. Al finalizar, confírmame que el reporte está listo para ser exportado a Google Docs.
+
+```
