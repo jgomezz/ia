@@ -4,7 +4,7 @@
 
 - Datos: Delitos denunciados en Perú (Enero-Noviembre 2025)
 - Archivo: <a href="dataset/BD-delitos-denunciados-2025-11.csv" >[MPFN] Delitos Denunciados 2025</a>
-- Diccionario: <a href="dataset/diccionario de datos - Delitos Penales_0.pdf" >Diccionario de datos - Delitos Denunciados</a>
+- Diccionario: <a href="dataset/Diccionario de datos- Delitos Penales.xlsx" >Diccionario de datos - Delitos Denunciados</a>
 
 Referencia https://www.datosabiertos.gob.pe/dataset/mpfn-delitos-denunciados
 
