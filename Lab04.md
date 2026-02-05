@@ -181,24 +181,60 @@ Expectation:
 
 **Objetivo**: Traducir datos a una visualización animada.
 
-Crear una visualización
+Crear el informe final usando la integración con Google Docs.
 
 ```
 Role: 
-   Actúa como un experto en Data Storytelling. 
+   Actúa como el responsable de asesores. 
 
 Action: 
-
-   Crea un gráfico de "Calor" o un gráfico de barras que muestre la evolución de denuncias por departamento. 
-
+   Redacta un Informe de Gestión de Seguridad basado en todos los análisis realizados hoy (Tendencias, Comparativa Regional e Insights). 
+   
 Context: 
-   Este gráfico será la pieza central de una presentación ante el Ministerio. 
+   El reporte debe estar listo para ser convertido a PDF y enviado por correo
    
 Expectation: 
-   1. El gráfico debe ser visualmente atractivo (usa colores degradados o estilos modernos). 
-   2. Acompáñalo de un "Titular de Impacto" que resuma el hallazgo más sorprendente de los datos. 
-   3. Redacta 3 puntos clave (bullets) que expliquen el gráfico a alguien que no sabe de estadística.
-   4. Dame el codigo Python usado para los calculos
-   5. Siempre debes leer el documento adjunto.
+   El reporte debe tener:
+
+      1.- Resumen Ejecutivo (máximo 5 líneas).
+
+      2.- Diagnóstico de la Ciberdelincuencia.
+
+      3.- Ranking de Regiones Críticas.
+
+      4.- Recomendaciones de Acción. Formatea el texto con títulos grandes (H1, H2) para que la exportación sea perfecta.
+
 
 ```
+
+
+## EJERCICIO 3: Creando Gems
+
+- **Paso 1 - Creación de Gems** 
+
+Ve al menú lateral, haz clic en Gems y selecciona "+ Nuevo Gem".
+
+Colocar como nombre : "Analista de Datos"
+
+Prompt de Instrucciones
+
+```
+Role: 
+   Actúa como un Análista de Datos. 
+
+Action: 
+   Tu tarea es procesar el archivo 'BD-delitos-denunciados' y validarlo contra su Diccionario de Datos. 
+
+Context: 
+   Trabajas con miles de registros. Siempre debes usar el intérprete de Python para cálculos estadísticos y geográficos. 
+
+Expectation: 
+   1. Al recibir un archivo, reporta si hay errores de formato (según el PDF del diccionario). 
+   2. Genera automáticamente un ranking de los 5 delitos más frecuentes. 
+   3. Traduce códigos técnicos a nombres legibles (Formato Tipo Oración). 
+   4. Proporciona el código Python usado es los cálculos 
+   5. Ofrece siempre un resumen ejecutivo para exportar a Google Docs.
+
+```
+
+<img src="images/gemini_create_gems.png"/>
