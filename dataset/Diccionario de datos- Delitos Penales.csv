@@ -1,0 +1,17 @@
+Variable,Descripción del Campo,Tipo de dato,Tamaño,Recurso relacionado,Información Adicional
+periodo_denuncia,Meses en que se realizó la denuncia del delito en el Ministerio Público,Texto,50,,
+anio_denuncia,año de la denuncia del delito en el Ministerio Público,Numérico,4,,
+fecha_descarga,Fecha de descarga de la información en los sistema informáticos,Fecha,-,,Formato: dd/mm/aaaa
+distrito_fiscal,Nombre del distrito fiscal.,Texto,30,,
+especialidad,Tipo de especialidad (Penal),Texto,10,,
+tipo_caso,Tipo de caso (denuncia),Texto,10,,
+generico,Delito genérico,Texto,100,,
+subgenerico,Delito Subgenérico,Texto,100,,
+articulo,Artículo del delito según el Código Penal,Alfanumerico,10,,
+des_articulo,Nombre o descripción del artículo según el Código Penal,Texto,100,,
+cantidad,Número de delitos denunciados,Numérico,6,,
+ubigeo_pjfs,Ubigeo de la Presidencia de Junta de Fiscales Superiores del Distrito Fiscal,Alfanumerico,6,Catalogo del INEI,
+dpto_pjfs,Departamento donde se encuentra ubicado la Presidencia de Junta de Fiscales Superiores del Distrito Fiscal,Texto,70,Catalogo del INEI,
+prov_pjfs,Provincia donde se encuentra ubicado la Presidencia de Junta de Fiscales Superiores del Distrito Fiscal,Texto,70,Catalogo del INEI,
+dist_pjfs,Distrito donde se encuentra ubicado la Presidencia de Junta de Fiscales Superiores del Distrito Fiscal,Texto,70,Catalogo del INEI,
+fecha_corte,Fecha en que se sube la información al DataSet,Fecha,-,,Formato: dd/mm/aaaa
