@@ -15,7 +15,7 @@ Referencia https://www.datosabiertos.gob.pe/dataset/mpfn-delitos-denunciados
 
 ## EJERCICIO 1: Configuracion de NotebookLM
 
-### **Paso 1 - Configuración del Entorno y Fuentes** 
+### PASO 1 - Configuración del Entorno y Fuentes
 
 A diferencia de los Gems de Gemini, NotebookLM basa su potencia en el análisis de documentos específicos cargados en un "Cuaderno".
 
@@ -29,7 +29,7 @@ A diferencia de los Gems de Gemini, NotebookLM basa su potencia en el análisis 
 
 ---
 
-## PASO 2: Definición del Rol (Instrucciones Personalizadas)
+### PASO 2: Definición del Rol (Instrucciones Personalizadas)
 
 Para que NotebookLM actúe con el rigor de un analista, se procedera a configura el chat, ingresar a la siguiente opción
 
@@ -53,6 +53,19 @@ Instrucciones:
 
 ---
 
+
+## PASO 3: Análisis de Integridad y Contexto
+
+Vamos a verificar si NotebookLM puede razonar sobre ambos archivos simultáneamente sin necesidad de recordarle qué archivos tiene.
+
+**Prompt de Análisis:**
+
+```text
+Basado estrictamente en las fuentes cargadas:
+1. Valida si las columnas del CSV coinciden con lo estipulado en el Diccionario de Datos. Reporta errores de formato si existen.
+2. Identifica los 3 distritos con menor cantidad de denuncias registradas.
+3. Presenta una tabla con el distrito y la cantidad exacta de registros encontrados.
+```
 
 
 
