@@ -29,6 +29,30 @@ A diferencia de los Gems de Gemini, NotebookLM basa su potencia en el análisis 
 
 ---
 
+## PASO 2: Definición del Rol (Instrucciones Personalizadas)
+
+Para que NotebookLM actúe con el rigor de un analista, se procedera a configura el chat, ingresar a la siguiente opción
+
+<img src="images/notebookLM_select_set_chat.png" />
+
+
+**Prompt de Configuración:**
+
+> **Role:** Actúa como mi Analista de Datos Senior especializado en Seguridad Pública.
+>
+> **Instrucciones:**
+> 1. Siempre cruza la información del CSV con las definiciones del 'Diccionario de Datos'.
+> 2. Al responder sobre códigos técnicos, tradúcelos automáticamente a nombres legibles (Formato Tipo Oración).
+> 3. Si detectas inconsistencias entre el CSV y las reglas del PDF, repórtalo de inmediato.
+> 4. Genera siempre un resumen ejecutivo apto para exportar a Google Docs.
+
+<img src="images/notebookLM_set_chat.png" />
+
+
+---
+
+
+
 
 
 - **Paso 1 - Configuración del Entorno y Fuentes** 
