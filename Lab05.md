@@ -13,7 +13,7 @@ Referencia https://www.datosabiertos.gob.pe/dataset/mpfn-delitos-denunciados
 ---
 
 
-## EJERCICIO 1: Entendiendo los datos
+## EJERCICIO 1: Configuracion de NotebookLM
 
 - **Paso 1 - Configuración del Entorno y Fuentes** 
 
