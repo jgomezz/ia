@@ -15,7 +15,7 @@ Referencia https://www.datosabiertos.gob.pe/dataset/mpfn-delitos-denunciados
 
 ## EJERCICIO 1: Configuracion de NotebookLM
 
-- **Paso 1 - Configuración del Entorno y Fuentes** 
+### **Paso 1 - Configuración del Entorno y Fuentes** 
 
 A diferencia de los Gems de Gemini, NotebookLM basa su potencia en el análisis de documentos específicos cargados en un "Cuaderno".
 
