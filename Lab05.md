@@ -15,10 +15,6 @@ Referencia https://www.datosabiertos.gob.pe/dataset/mpfn-delitos-denunciados
 
 ## EJERCICIO 1: Entendiendo los datos
 
-
-
----
-
 - **Paso 1 - Configuración del Entorno y Fuentes** 
 
 A diferencia de los Gems de Gemini, NotebookLM basa su potencia en el análisis de documentos específicos cargados en un "Cuaderno".
@@ -26,7 +22,7 @@ A diferencia de los Gems de Gemini, NotebookLM basa su potencia en el análisis 
 1.  **Acceso:** Ingresa a [NotebookLM](https://notebooklm.google.com/).
 2.  **Creación:** Haz clic en **"Nuevo Cuaderno"** y asígnale el nombre: `Proyecto de Análisis de Datos`.
 3.  **Carga de Conocimiento:** En el panel de "Fuentes", sube los siguientes archivos:
-    * `BD-delitos-denunciados-2025-11.csv` (Base de datos).
+    * `BD-delitos-denunciados-2025-11.csv` (Dataset).
     * `Diccionario de datos- Delitos Penales.csv` (Diccionario de datos).
 
 <img src="images/notebookLM_create.png" />
