@@ -1,0 +1,11 @@
+Variable,Descripción,Tipo de dato,Tamaño,Recurso relacionado,Información Adicional 
+AÑO,Año en que ocurrio la desaparición,Cadena,4,,Formato: aaaammdd
+MES,Mes en que ocurrio la desaparición,Cadena,2,,
+UBIGEO,"Ubigeo INEI, donde ocurrio la desaparición",Cadena,6,,
+DPTO_HECHO,Departamento en que ocurrio la desaparición,Cadena,30,,
+PROV_HECHO,Provincia en que ocurrio la desaparición,Cadena,30,,
+DIST_HECHO,Distristo en que ocurrio la desaparición,Cadena,30,,
+SEXO,Sexo de la persona desaparecida,Cadena,1,,"F:Femenino, M:Masculino"
+RANGO_EDAD,Rango de edad de la persona desaparecida,Cadena,13,,Contiene valos vacios
+NACIONALIDAD,Nacinalidad de la persona desaparecida,Cadena,14,,
+CANTIDAD,Cantidad de casos,Numérico,2,,
