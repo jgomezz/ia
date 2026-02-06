@@ -3,8 +3,8 @@
 ### Contexto
 Se proporciona el archivo DATASET_Personas_Desaparecidas_2025.csv, que contiene información sobre personas desaparecidas registradas durante el año 2025 en el Perú, desagregada por departamento, mes, sexo y rango de edad.
 
-- Archivo: <a href="dataset/DATASET_Personas_Desaparecidas_2025.csv" >Personas Desaparecidas 2025</a>
-- Diccionario: <a href="dataset/DICCIONARIO_DATOS_ Personas_Desaparecidas.csv" >Diccionario de datos - Personas Desaparecidas 2025</a>
+- Archivo: <a href="dataset-final/DATASET_Personas_Desaparecidas_2025.csv" >Personas Desaparecidas 2025</a>
+- Diccionario: <a href="dataset-final/DICCIONARIO_DATOS_ Personas_Desaparecidas.csv" >Diccionario de datos - Personas Desaparecidas 2025</a>
 
 ### Instrucciones
 Usando el dataset proporcionado y una herramientas de IA y complementos, responda lo siguiente:
