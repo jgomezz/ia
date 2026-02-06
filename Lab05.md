@@ -64,318 +64,50 @@ Vamos a verificar si NotebookLM puede razonar sobre ambos archivos simultáneame
 Basado estrictamente en las fuentes cargadas:
 1. Valida si las columnas del CSV coinciden con lo estipulado en el Diccionario de Datos. Reporta errores de formato si existen.
 2. Identifica los 3 distritos con menor cantidad de denuncias registradas.
-3. Presenta una tabla con el distrito y la cantidad exacta de registros encontrados.
+3. Presenta una tabla con el distrito y la cifra exacta de registros encontrados en el documento.
 ```
 
 
+## PASO 4: Storytelling y Síntesis Regional
 
+NotebookLM destaca creando "Notas guardadas" que puedes usar para tu reporte final.
 
-- **Paso 1 - Configuración del Entorno y Fuentes** 
+**Prompt de Análisis:**
 
-**Objetivo**: Que la IA explique el archivo al analista para evitar errores de interpretación.
-
-Subir los 2 archivos y ejecutar el siguiente prompt
-
-
-```
-Role: Actúa como un consultor de datos que explica conceptos.
-
-Action: Lee el PDF del diccionario y analiza el CSV. Explícame en lenguaje sencillo de qué trata esta base de datos.
-
-Context: Estoy empezando a usar IA y no quiero confundirme con nombres técnicos de las columnas.
-
-Expectation: Una lista de las 5 columnas más importantes para hacer un reporte de seguridad y un aviso si encuentras algo que no coincida entre el diccionario y el CSV.
-
-```
-
-- **Paso 2 - Limpieza de Datos**
-
-**Objetivo**: Aprender a corregir textos y formatos solo hablando con la IA.
-
-Vamos a arreglar los nombres de los delitos que están en mayúsculas.
-
-```
-Role: Actúa como un editor de contenido experto.
-
-Action: Ayúdame a limpiar la columna des_articulo y distrito_fiscal.
-
-Context: Los nombres están en mayúsculas cerradas y se ven mal en un reporte.
-
-Expectation: 
-      1. Cambia los nombres a formato tipo oración (Ej: "FRAUDE INFORMÁTICO" a "Fraude informático"). 
-      2. Muéstrame una tabla con el antes y después de 5 ejemplos.
-
-```
-
-- **Paso 3 - Extracción de Insight**
-
-**Objetivo**: Encontrar dónde está el problema de la ciberdelincuencia.
-
-Vamos a arreglar los nombres de los delitos que están en mayúsculas.
-
-```
-Role: Actúa como un detective de datos.
-
-Action: Busca en el archivo todas las denuncias que tengan que ver con la "LEY DE DELITOS INFORMATICOS".
-
-Context: Mi jefe necesita saber en qué regiones de Perú se están denunciando más estos casos.
-
-Expectation: 
-      1. Una tabla que sume la cantidad por distrito_fiscal solo de esos delitos. 
-      2. Un gráfico sencillo (de barras) creado aquí mismo que muestre esta comparación. 
-      3. Dime qué región es la más afectada según los números.
-
-```
-
-- **Paso 4 - Creación del Reporte y PDF Final**
-
-**Objetivo**: Aprender el flujo de trabajo para presentar el trabajo.
-
-Unificar todo en un informe profesional.
-
-```
-Role: Actúa como un redactor jefe de informes corporativos.
-
-Action: Redacta un resumen ejecutivo de lo que hemos descubierto hoy sobre las denuncias de noviembre 2025.
-
-Context: El reporte debe ser breve, para alguien que tiene poco tiempo de leer.
-
-Expectation: 
-      1. Un título impactante. 
-      2. Tres puntos clave (insights). 
-      3. Una conclusión sobre el impacto de la ciberdelincuencia. 
-      4. Organiza todo con negritas y viñetas para que se vea bien al exportarlo a un documento.
-
-```
-
-Para exportar el documento realizarlo en esta opción
-
-<img src="images/gemini_exportar.png" />
-
-
-## EJERCICIO 2: Análisis Predictivo y Storytelling de Datos
-
-
-- **Paso 1 - Análisis de Tendencias y "Pareto"** 
-
-**Objetivo**: Identificar dónde está el 80% del problema sin usar fórmulas complejas.
-
-Subir los 2 archivos y ejecutar el siguiente prompt
-
-```
-Role: Actúa como un Analista de Estrategia Criminal. 
-
-Action: Identifica los 5 delitos que suman el mayor volumen de denuncias en todo el país (des_articulo) y calcula qué porcentaje representan del total. 
-
-Context: Necesitamos priorizar recursos para el próximo año basándonos en los datos de noviembre 2025. 
-
-Expectation: 
-   1. Una tabla con el Delito, la Cantidad y el % de participación. 
-   2. Una breve explicación de por qué estos delitos son los más críticos según tu análisis. 
-   3. Usa Python para asegurar que el cálculo sobre los miles de registros sea exacto.
-   4. Dame el codigo Python usado para los calculos
-   5. Siempre debes leer el documento adjunto.
-
-```
-
-
-- **Paso 2 - Análisis de Tendencias y "Pareto"** 
-
-**Objetivo**: Comparar realidades distintas (ej. Costa vs. Selva) para encontrar anomalías.
-
-Vamos a pedirle a Gemini que agrupe departamentos.
-
-```
+```text
 Role: 
-   Actúa como un Geógrafo de Datos. 
-   
-Action: 
-   Compara el comportamiento de los delitos informáticos entre el Distrito Fiscal de LIMA y el de PIURA. 
-   
-Context: 
-   Queremos saber si la ciberdelincuencia afecta igual a la capital que al norte del país. 
-   
-Expectation: 
-   1. Un cuadro comparativo con la cantidad de denuncias de la "LEY Nº 30096". 
-   2. Identifica cuál es el delito informático más frecuente en cada una de estas dos regiones. 
-   3. Crea un gráfico de barras comparativo (usando Python) para visualizar esta diferencia
-   4. Dame el codigo Python usado para los calculos
-   5. Siempre debes leer el documento adjunto.
-
-```
-
-
-- **Paso 3 - Storytelling y Visualización de Impacto** 
-
-**Objetivo**: Traducir datos a una visualización animada.
-
-Crear una visualización
-
-```
-Role: 
-   Actúa como un experto en Data Storytelling. 
+   Experto en Comunicación de Datos.
 
 Action: 
+   Analiza la situación en el departamento de AMAZONAS. 
 
-   Crea un gráfico de "Calor" o un gráfico de barras que muestre la evolución de denuncias por departamento. 
-
-Context: 
-   Este gráfico será la pieza central de una presentación ante el Ministerio. 
-   
-Expectation: 
-   1. El gráfico debe ser visualmente atractivo (usa colores degradados o estilos modernos). 
-   2. Acompáñalo de un "Titular de Impacto" que resuma el hallazgo más sorprendente de los datos. 
-   3. Redacta 3 puntos clave (bullets) que expliquen el gráfico a alguien que no sabe de estadística.
-   4. Dame el codigo Python usado para los calculos
-   5. Siempre debes leer el documento adjunto.
+Expectation:
+   1. Describe la distribución de delitos por el campo 'generico' en dicha región.
+   2. Identifica cuál es el delito dominante y busca en el diccionario de datos el artículo legal asociado.
+   3. Escribe un párrafo narrativo para una presentación que explique el impacto social de este dato en Amazonas.
 
 ```
 
+## PASO 5: Reporte Final y Exportación
 
+NotebookLM permite consolidar notas para crear documentos estructurados.
 
-- **Paso 4 - Generación de Reporte** 
+**Prompt de Análisis:**
 
-**Objetivo**: Traducir datos a una visualización animada.
-
-Crear el informe final usando la integración con Google Docs.
-
-```
-Role: 
-   Actúa como el responsable de asesores. 
+```text
+Role: Consultor Senior para el Ministerio Público.
 
 Action: 
-   Redacta un Informe de Gestión de Seguridad basado en todos los análisis realizados hoy (Tendencias, Comparativa Regional e Insights). 
-   
-Context: 
-   El reporte debe estar listo para ser convertido a PDF y enviado por correo
-   
-Expectation: 
-   El reporte debe tener:
+   Elabora el "Informe Anual de Tendencias de Criminalidad 2025" consolidando la inteligencia del CSV y el Diccionario de Datos.
 
-      1.- Resumen Ejecutivo (máximo 5 líneas).
+Expectation:
+   1. Resumen Ejecutivo: Un párrafo de alto impacto con el hallazgo más crítico.
+   2. Análisis de Integridad: Confirmación de cumplimiento técnico según el PDF.
+   3. Diagnóstico Regional: Ranking de los 3 Distritos Fiscales más afectados.
+   4. Foco Legal: Análisis de la incidencia de la Ley Nº 30096 (Ciberdelincuencia).
+   5. Recomendaciones: 3 acciones concretas para 2026.
 
-      2.- Diagnóstico de la Ciberdelincuencia.
-
-      3.- Ranking de Regiones Críticas.
-
-      4.- Recomendaciones de Acción. Formatea el texto con títulos grandes (H1, H2) para que la exportación sea perfecta.
-
-
-```
-
-
-## EJERCICIO 3: Creando Gems
-
-- **Paso 1 - Creación de Gems** 
-
-Ve al menú lateral, haz clic en Gems y selecciona "+ Nuevo Gem".
-
-Colocar como nombre : "Analista de Datos"
-
-Prompt de Instrucciones
-
-```
-Role: 
-   Actúa como un Análista de Datos. 
-
-Action: 
-   Tu tarea es procesar el archivo 'BD-delitos-denunciados' y validarlo contra su Diccionario de Datos. 
-
-Context: 
-   Trabajas con miles de registros. Siempre debes usar el intérprete de Python para cálculos estadísticos y geográficos. 
-
-Expectation: 
-   1. Al recibir un archivo, reporta si hay errores de formato (según el PDF del diccionario). 
-   2. Genera automáticamente un ranking de los 5 delitos más frecuentes. 
-   3. Traduce códigos técnicos a nombres legibles (Formato Tipo Oración). 
-   4. Proporciona el código Python usado es los cálculos 
-   5. Ofrece siempre un resumen ejecutivo para exportar a Google Docs.
-
-```
-
-<img src="images/gemini_create_gems.png"/>
-
-
-- **Paso 2 - Análisis de Contexto** 
-
-- Comprobar que el Gem recuerda los archivos sin adjuntarlo
-
-Abrir el Gem "Analista de Datos"
-
-Ejecutar el siguiente prompt
-
-```
-Role: 
-   Analista Senior. 
-
-Action: 
-   Basándote únicamente en el archivo CSV que tienes cargado en tu conocimiento, identifica los 3 distritos con menor cantidad de denuncias. 
-
-Context: 
-   Queremos entender las zonas con menor incidencia reportada. 
-
-Expectation: 
-   Una lista con el distrito y la cantidad exacta. Si necesitas usar Python para verificarlo en el conocimiento, hazlo
-
-```
-
-
-- **Paso 3 - Storytelling y Visualización** 
-
-- Pedirle al Gem que use los datos que ya "conoce" para crear una narrativa.
-
-
-Prompt
-
-```
-Role: 
-   Experto en Comunicación de Datos. 
-   
-Action: 
-   Crea un gráfico de pastel que muestre la distribución de delitos por 'generico' en el departamento de AMAZONAS. 
-
-Context: 
-   Estoy preparando una diapositiva para el comité regional. 
-
-Expectation: 
-   1. El gráfico generado por Python. 
-   2. Un párrafo explicando qué delito domina en esa región y una recomendación preventiva basada en el nombre del artículo.
-
-```
-
-
-- **Paso 4 - Reporte** 
-
-- Aprender a actualizar el conocimiento y cerrar el informe.
-
-
-Prompt
-
-```
-Role: 
-   Actúa como un Consultor Senior en Análisis de Datos y Redacción Corporativa, experto en elaborar reportes de alto nivel para el Ministerio Público.
-
-Action: 
-   Elabora el "Informe Anual de Tendencias de Criminalidad 2025" consolidando toda la inteligencia extraída del archivo CSV y cruzándola con las definiciones del Diccionario de Datos.
-
-Context: 
-   Este reporte será presentado ante una junta directiva. Necesito que los datos fríos se conviertan en una narrativa estratégica que facilite la toma de decisiones para el año 2026.
-
-Expectation: 
-   Estructura el informe exactamente con los siguientes puntos y usa Python para verificar que cada cifra sea exacta:
-
-      1. Resumen Ejecutivo: Un párrafo de alto impacto con el hallazgo más crítico del mes.
-
-      2. Análisis de Integridad: Confirmación de que los datos cumplen con el diccionario técnico (menciona el PDF).
-
-      3. Diagnóstico Regional: Un ranking de los 3 Distritos Fiscales más afectados y qué tipo de delitos predominan allí.
-
-      4. Foco en Ciberdelincuencia: Análisis específico de la Ley Nº 30096.
-
-      5. Conclusiones y Recomendaciones: 3 acciones concretas sugeridas para reducir la incidencia delictiva.
-
-Formato de salida: 
-
-   Usa encabezados (H1, H2), negritas para resaltar KPIs y tablas limpias. Al finalizar, confírmame que el reporte está listo para ser exportado a Google Docs.
+Formato: 
+   Usa encabezados (H1, H2) y negritas para KPIs. Confírmame cuando esté listo para ser copiado a Google Docs.
 
 ```
