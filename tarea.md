@@ -28,3 +28,7 @@ Usando el dataset proporcionado y una herramientas de IA y complementos, respond
 - Informe final con la información obtenida
 
 - Prompt usados
+
+### Entrega del documento <a href="https://drive.google.com/drive/folders/1I25SAm0S8DGzeH7dAV8I8MTtWbHcDvfB?usp=sharing" >Aca </>
+
+
