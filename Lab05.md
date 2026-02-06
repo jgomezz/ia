@@ -29,7 +29,7 @@ A diferencia de los Gems de Gemini, NotebookLM basa su potencia en el análisis 
     * `BD-delitos-denunciados-2025-11.csv` (Base de datos).
     * `Diccionario de datos- Delitos Penales.csv` (Diccionario de datos).
 
-<img src="iamges/notebookLM_create.png" />
+<img src="images/notebookLM_create.png" />
 
 ---
 
